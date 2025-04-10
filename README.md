@@ -1,4 +1,4 @@
-<h1 align="center"><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Winky+Rough&weight=500&size=30&pause=1000&center=true&vCenter=true&width=440&lines=meow+(+*%EF%BD%80%CF%89%C2%B4);I+am+ElvisLo+%CA%95+%E2%80%A2%E1%B4%A5%E2%80%A2%CA%94;A+Rhythm+Gamer;orange+cat+not+fat+(*%2F%CF%89%EF%BC%BC*);Tabby+cat+is+cute" alt="Typing SVG" /></a><img src="https://komarev.com/ghpvc/?username=elvislo030&label=Profile%20views&color=0e75b6&style=flat" alt="elvislo030" /></h1>
+<h1 align="center"><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Winky+Rough&weight=500&size=30&pause=1000&center=true&vCenter=true&width=440&lines=meow+(+*%EF%BD%80%CF%89%C2%B4);I+am+ElvisLo+%CA%95+%E2%80%A2%E1%B4%A5%E2%80%A2%CA%94;A+Rhythm+Gamer;orange+cat+not+fat+(*%2F%CF%89%EF%BC%BC*);Tabby+cat+is+cute!!!" alt="Typing SVG" /></a><img src="https://komarev.com/ghpvc/?username=elvislo030&label=Profile%20views&color=0e75b6&style=flat" alt="elvislo030" /></h1>
 
 <h3>Hi👋 I am ElvisLo (´▽｀)</h3>
 <h3>📌 A student from Taiwan</h3>
