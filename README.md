@@ -8,7 +8,4 @@
 <h3>✉️ elvislo.work@gmail.com</h3>
 <h3><a href="https://elvislo030.notion.site/?pvs=4">🐶 More About</a></h3>
 
-
-
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=elvislo030&show_icons=true&locale=en" alt="elvislo030" /></p>
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=elvislo030&" alt="elvislo030" /> </p>
+<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=elvislo030&show_icons=true&theme=dark&locale=en" alt="elvislo030" /></p>
