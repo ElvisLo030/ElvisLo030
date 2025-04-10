@@ -4,6 +4,7 @@
 <h3>📌 A student from Taiwan</h3>
 <h3>🏫 CSU-mis</h3>
 <h3>📖 Learning about python , java , vue , PostgreSQL and more</h3>
+<h3>✨ Rhythm Gamer for maimai , chu , arc</h3>
 <h3>✉️ elvislo.work@gmail.com</h3>
 <h3><a href="https://elvislo030.notion.site/?pvs=4">🐶 More About</a></h3>
 
