@@ -2,10 +2,12 @@
 
 <h3>Hi👋 I am ElvisLo (´▽｀)</h3>
 <h3>📌 A student from Taiwan</h3>
-<h3>🏫 CSU-mis</h3>
+<h3>🏫 CSU-MIS</h3>
 <h3>📖 Learning about python , java , vue , PostgreSQL and more</h3>
 <h3>✨ Rhythm Gamer for maimai , chu , arc</h3>
-<h3>✉️ elvislo.work@gmail.com</h3>
-<h3><a href="https://www.elvislo.tw">🐶 More About</a></h3>
+<h3><a href="mailto:me@elvislo.tw" >
+  <span>✉️ me@elvislo.tw</span>
+</a></h3>
+<h3><a href="https://www.elvislo.tw">🐶 My Blog</a></h3>
 
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=elvislo030&show_icons=true&theme=dark&locale=en" alt="elvislo030" /></p>
