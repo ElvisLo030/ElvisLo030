@@ -3,7 +3,7 @@
 <h3>Hi There 👋 I am ElvisLo (´▽｀)</h3>
 <h3>🇹🇼 A student from Taiwan</h3>
 <h3>🏫 CSU-MIS</h3>
-<h3>📖 Learning about python , java , vue , PostgreSQL and more</h3>
+<h3>📖 Learning about Python , Java , Vue , PostgreSQL </h3>
 <h3>🎮 Rhythm Gamer </h3>
 <h3><a href="mailto:me@elvislo.tw" >
   <span>✉️ me@elvislo.tw</span>
