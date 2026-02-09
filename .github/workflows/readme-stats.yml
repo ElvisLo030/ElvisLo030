@@ -10,6 +10,8 @@ on:
 jobs:
   update-cards:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Record Start Time
         id: start-time
@@ -17,6 +19,8 @@ jobs:
 
       # 1. Checkout & Setup
       - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.PAT_1 }}
       
       - name: Checkout Tool Source
         uses: actions/checkout@v3
