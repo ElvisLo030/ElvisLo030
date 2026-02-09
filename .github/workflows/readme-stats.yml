@@ -50,12 +50,12 @@ jobs:
       # 4. 產生 Stats Card (個人資料統計)
       - name: Generate Stats Card
         run: |
-          curl "http://localhost:9000/api?username=ElvisLo030&show_icons=true&count_private=true&theme=react&hide_border=true" > assets/stats-card.svg
+          curl "http://localhost:9000/api?username=ElvisLo030&show_icons=true&count_private=true&theme=react&hide_border=true&count_private=true" > assets/stats-card.svg
 
       # 5. 產生 Top Languages (常用語言)
       - name: Generate Top Langs Card
         run: |
-          curl "http://localhost:9000/api/top-langs?username=ElvisLo030&layout=compact&theme=react&hide_border=true" > assets/top-langs.svg
+          curl "http://localhost:9000/api/top-langs?username=ElvisLo030&layout=compact&theme=react&hide_border=true&count_private=true" > assets/top-langs.svg
 
       # 6. 產生 Pin Card (專案釘選)
       - name: Generate Pin Cards
@@ -63,7 +63,7 @@ jobs:
           # === 設定區 ===
           # 請在這裡列出你想釘選的專案名稱 (用空白分隔)
           # 例如: "FCU-CourseData greendango-store project-c"
-          REPOS="Elvis-Blog EatNow TAICA_FinalProject_DataProcessing"
+          REPOS="Elvis-Blog EatNow TAICA_FinalProject_DataProcessing 114th_TAICA_HW2"
 
           for repo in $REPOS; do
             echo "Generating pin for $repo..."

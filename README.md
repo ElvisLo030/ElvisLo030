@@ -25,4 +25,5 @@
   <img src="assets/pin-Elvis-Blog.svg" alt="Elvis-Blog" />
   <img src="assets/pin-EatNow.svg" alt="EatNow" />
   <img src="assets/pin-TAICA_FinalProject_DataProcessing.svg" alt="TAICA_FinalProject_DataProcessing" />
+  <img src="assets/pin-114th_TAICA_HW2.svg" alt="114th_TAICA_HW2" />
 </div>
