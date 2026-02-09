@@ -50,12 +50,12 @@ jobs:
       # 4. 產生 Stats Card (個人資料統計)
       - name: Generate Stats Card
         run: |
-          curl "http://localhost:9000/api?username=ElvisLo&show_icons=true&count_private=true&theme=react&hide_border=true" > assets/stats-card.svg
+          curl "http://localhost:9000/api?username=ElvisLo030&show_icons=true&count_private=true&theme=react&hide_border=true" > assets/stats-card.svg
 
       # 5. 產生 Top Languages (常用語言)
       - name: Generate Top Langs Card
         run: |
-          curl "http://localhost:9000/api/top-langs?username=ElvisLo&layout=compact&theme=react&hide_border=true" > assets/top-langs.svg
+          curl "http://localhost:9000/api/top-langs?username=ElvisLo030&layout=compact&theme=react&hide_border=true" > assets/top-langs.svg
 
       # 6. 產生 Pin Card (專案釘選)
       - name: Generate Pin Cards
@@ -67,7 +67,7 @@ jobs:
 
           for repo in $REPOS; do
             echo "Generating pin for $repo..."
-            curl "http://localhost:9000/api/pin?username=ElvisLo&repo=$repo&theme=react&hide_border=true" > assets/pin-$repo.svg
+            curl "http://localhost:9000/api/pin?username=ElvisLo030&repo=$repo&theme=react&hide_border=true" > assets/pin-$repo.svg
           done
 
       # 7. 上傳變更
@@ -95,7 +95,7 @@ jobs:
 
           echo "## ✅ Workflow Completed Successfully" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "- **User:** ElvisLo" >> $GITHUB_STEP_SUMMARY
+          echo "- **User:** ElvisLo030" >> $GITHUB_STEP_SUMMARY
           echo "- **Theme:** react" >> $GITHUB_STEP_SUMMARY
           echo "- **Stats Card Size:** $(wc -c < assets/stats-card.svg) bytes" >> $GITHUB_STEP_SUMMARY
           echo "- **Top Langs Size:** $(wc -c < assets/top-langs.svg) bytes" >> $GITHUB_STEP_SUMMARY
