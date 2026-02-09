@@ -9,3 +9,20 @@
   <span>✉️ me@elvislo.tw</span>
 </a></h3>
 <h3><a href="https://www.elvislo.tw">🐶 My Blog</a></h3>
+
+---
+
+## 📊 GitHub Stats
+
+<div align="center">
+  <img src="assets/stats-card.svg" alt="GitHub Stats" />
+  <img src="assets/top-langs.svg" alt="Top Languages" />
+</div>
+
+## 📌 Pinned Projects
+
+<div align="center">
+  <img src="assets/pin-Elvis-Blog.svg" alt="Elvis-Blog" />
+  <img src="assets/pin-EatNow.svg" alt="EatNow" />
+  <img src="assets/pin-TAICA_FinalProject_DataProcessing.svg" alt="TAICA_FinalProject_DataProcessing" />
+</div>

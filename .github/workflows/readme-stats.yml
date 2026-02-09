@@ -1,0 +1,100 @@
+#  anuraghazra/github-readme-stats
+
+name: Update Readme Cards
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  update-cards:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Record Start Time
+        id: start-time
+        run: echo "timestamp=$(date +%s)" >> $GITHUB_OUTPUT
+
+      # 1. Checkout & Setup
+      - uses: actions/checkout@v3
+      
+      - name: Checkout Tool Source
+        uses: actions/checkout@v3
+        with:
+          repository: anuraghazra/github-readme-stats
+          path: stats-tool
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      
+      # 2. 啟動本地伺服器
+      - name: Start Local Server
+        env:
+          PAT_1: ${{ secrets.PAT_1 }}
+        run: |
+          cd stats-tool
+          npm install
+          nohup node express.js > /dev/null 2>&1 &
+          echo "Waiting for server to launch..."
+          sleep 10
+
+      # 3. 準備 Assets 目錄
+      - name: Prepare Assets Directory
+        run: mkdir -p assets
+
+      # 4. 產生 Stats Card (個人資料統計)
+      - name: Generate Stats Card
+        run: |
+          curl "http://localhost:9000/api?username=ElvisLo&show_icons=true&count_private=true&theme=react&hide_border=true" > assets/stats-card.svg
+
+      # 5. 產生 Top Languages (常用語言)
+      - name: Generate Top Langs Card
+        run: |
+          curl "http://localhost:9000/api/top-langs?username=ElvisLo&layout=compact&theme=react&hide_border=true" > assets/top-langs.svg
+
+      # 6. 產生 Pin Card (專案釘選)
+      - name: Generate Pin Cards
+        run: |
+          # === 設定區 ===
+          # 請在這裡列出你想釘選的專案名稱 (用空白分隔)
+          # 例如: "FCU-CourseData greendango-store project-c"
+          REPOS="Elvis-Blog EatNow TAICA_FinalProject_DataProcessing"
+
+          for repo in $REPOS; do
+            echo "Generating pin for $repo..."
+            curl "http://localhost:9000/api/pin?username=ElvisLo&repo=$repo&theme=react&hide_border=true" > assets/pin-$repo.svg
+          done
+
+      # 7. 上傳變更
+      - name: Commit & Push Changes
+        run: |
+          if [[ -n $(git status -s) ]]; then
+            git config --local user.name "github-actions[bot]"
+            git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add assets/
+            git commit -m "docs: update dynamic stats cards [skip ci]"
+            git push
+          else
+            echo "No changes detected."
+          fi
+
+      - name: Workflow Summary
+        if: success()
+        run: |
+          # Calculate execution time
+          START_TIME=${{ steps.start-time.outputs.timestamp }}
+          END_TIME=$(date +%s)
+          DURATION=$((END_TIME - START_TIME))
+          MINUTES=$((DURATION / 60))
+          SECONDS=$((DURATION % 60))
+
+          echo "## ✅ Workflow Completed Successfully" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- **User:** ElvisLo" >> $GITHUB_STEP_SUMMARY
+          echo "- **Theme:** react" >> $GITHUB_STEP_SUMMARY
+          echo "- **Stats Card Size:** $(wc -c < assets/stats-card.svg) bytes" >> $GITHUB_STEP_SUMMARY
+          echo "- **Top Langs Size:** $(wc -c < assets/top-langs.svg) bytes" >> $GITHUB_STEP_SUMMARY
+          echo "- **Pin Cards Generated:** $(ls assets/pin-*.svg 2>/dev/null | wc -l)" >> $GITHUB_STEP_SUMMARY
+          echo "- **Execution Time:** ${MINUTES}m ${SECONDS}s" >> $GITHUB_STEP_SUMMARY
+          echo "- **Updated:** $(date -u '+%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
