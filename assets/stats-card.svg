@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">ElvisLo's GitHub Stats, Rank: C+</title>
-        <desc id="descId">Total Stars Earned: 2, Total Commits  (last year) : 157, Total PRs: 13, Total Issues: 43, Contributed to (last year): 3</desc>
+        <desc id="descId">Total Stars Earned: 2, Total Commits  (last year) : 157, Total PRs: 18, Total Issues: 46, Contributed to (last year): 3</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 199.74973420778173;
+        stroke-dashoffset: 195.72855936699662;
       }
     }
   
@@ -192,7 +192,7 @@
         x="219.01"
         y="12.5"
         data-testid="prs"
-      >13</text>
+      >18</text>
     </g>
   </g><g transform="translate(0, 75)">
     <g class="stagger" style="animation-delay: 900ms" transform="translate(25, 0)">
@@ -207,7 +207,7 @@
         x="219.01"
         y="12.5"
         data-testid="issues"
-      >43</text>
+      >46</text>
     </g>
   </g><g transform="translate(0, 100)">
     <g class="stagger" style="animation-delay: 1050ms" transform="translate(25, 0)">
