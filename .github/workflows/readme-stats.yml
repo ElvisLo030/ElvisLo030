@@ -67,7 +67,7 @@ jobs:
 
           for repo in $REPOS; do
             echo "Generating pin for $repo..."
-            curl "http://localhost:9000/api/pin?username=ElvisLo030&repo=$repo&theme=react&hide_border=true" > assets/pin-$repo.svg
+            curl "http://localhost:9000/api/pin?username=ElvisLo030&repo=$repo&theme=react&hide_border=true&description_lines_count=1" > assets/pin-$repo.svg
           done
 
       # 7. 上傳變更
