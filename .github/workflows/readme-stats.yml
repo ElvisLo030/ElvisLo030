@@ -18,17 +18,17 @@ jobs:
         run: echo "timestamp=$(date +%s)" >> $GITHUB_OUTPUT
 
       # 1. Checkout & Setup
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           token: ${{ secrets.PAT_1 }}
-      
+
       - name: Checkout Tool Source
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: anuraghazra/github-readme-stats
           path: stats-tool
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: 18
       
@@ -63,7 +63,7 @@ jobs:
           # === 設定區 ===
           # 請在這裡列出你想釘選的專案名稱 (用空白分隔)
           # 例如: "FCU-CourseData greendango-store project-c"
-          REPOS="Elvis-Blog EatNow TAICA_FinalProject_DataProcessing 114th_TAICA_HW2"
+          REPOS="EcoFate EatNow TAICA_FinalProject_DataProcessing 114th_TAICA_HW2"
 
           for repo in $REPOS; do
             echo "Generating pin for $repo..."
@@ -73,7 +73,7 @@ jobs:
       # 7. 上傳變更
       - name: Commit & Push Changes
         run: |
-          if [[ -n $(git status -s) ]]; then
+          if [[ -n $(git status -s assets/) ]]; then
             git config --local user.name "github-actions[bot]"
             git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add assets/

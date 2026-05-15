@@ -22,8 +22,8 @@
 ## 📌 Pinned Projects
 
 <div align="center">
-  <a href="https://github.com/ElvisLo030/Elvis-Blog">
-    <img src="assets/pin-Elvis-Blog.svg" alt="Elvis-Blog" width="49%" />
+  <a href="https://github.com/ElvisLo030/EcoFate">
+    <img src="assets/pin-EcoFate.svg" alt="EcoFate" width="49%" />
   </a>
   <a href="https://github.com/ElvisLo030/TAICA_FinalProject_DataProcessing">
     <img src="assets/pin-TAICA_FinalProject_DataProcessing.svg" alt="TAICA_FinalProject_DataProcessing" width="49%" />
